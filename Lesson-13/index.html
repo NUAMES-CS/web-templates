@@ -6,6 +6,7 @@
     <style>
       body{
         height: 500px;
+      }
 /*
         background-position: center;
         background-size: 500px;
@@ -28,7 +29,7 @@
 
         background: radial-gradient(circle at 70% 64%, orange,
     #25b25d 18%, gray 77%);
-    */
+
       }
 
       ul{
@@ -39,9 +40,23 @@
       ul li:nth-of-type(3n+2){
           background: #0000ff;
         }
+        */
+      #b1{
+        border: 50px solid;
+        border-image-source: url("border.png");
+        border-image-slice: 45 98 44 96;
+      }
+      #b2{
+        border: 50px solid;
+        border-image-source: url("r2d2.jpg");
+        }
+      #b3{
+        outline: 15px dashed red;
+        }
   </style>
   </head>
   <body>
+<!--
     <ul>
       <li>1</li>
       <li>1</li>
@@ -50,6 +65,11 @@
       <li>1</li>
       <li>1</li>
     </ul>
+-->
+<img id='b3' src="droid.jpg">
+<img id='b2' src="droid.jpg">
+<img id='b1' src="droid.jpg">
+
 
   </body>
 </html>
