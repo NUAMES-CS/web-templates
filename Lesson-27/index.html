@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form name="form" action="index.html" method="post">
+      <fieldset>
+        <legend>Name</legend>
+        <label for="fname">What is your first name?</label>
+        <input type="text" id="fname" name="first_name" placeholder="John" size="15" autofocus>
+        <br>
+        <label for="lname">What is your last name?</label>
+        <input type="text" id="lname" name="last_name" placeholder="Smith" size="25">
+      </fieldset>
+      <fieldset>
+        <legend>Data</legend>
+        Give me some stars:
+        <label for="s1">*</label>
+        <input type="radio" name="stars" value=1>
+        <label for="s2">**</label>
+        <input type="radio" name="stars" value=2>
+        <label for="s3">***</label>
+        <input type="radio" name="stars" value=3>
+        <label for="s4">****</label>
+        <input type="radio" name="stars" value=4>
+        <label for="s5">*****</label>
+        <input type="radio" name="stars" value=5>
+        <br>
+        Check some boxes:
+        <label for="c1">Box 1</label>
+        <input type="checkbox" name="boxes[]" value="Box 1">
+        <label for="c2">Box 2</label>
+        <input type="checkbox" name="boxes[]" value="Box 2">
+        <label for="c3">Box 3</label>
+        <input type="checkbox" name="boxes[]" value="Box 3">
+        <label for="c4">Box 4</label>
+        <input type="checkbox" name="boxes[]" value="Box 4">
+        <br>
+        <label for='select'>Select something:</label>
+        <select name="select" size="2">
+          <option value="yes">Yes</option>
+          <option value="maybe">Maybe</option>
+          <option value="no">No</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Thoughts?</legend>
+        <textarea name="thought" rows="8" cols="80"></textarea>
+      </fieldset>
+    </form>
+  </body>
+</html>
