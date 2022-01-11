@@ -13,6 +13,23 @@
         <br>
         <label for="lname">What is your last name?</label>
         <input type="text" id="lname" name="last_name" placeholder="Smith" size="25">
+        <br>
+        <label for="email">What is your email?</label>
+        <input type="email" id="email" name="email" placeholder="john@smith.com">
+        <br>
+        <label for="phone">What is your phone number?</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <input type="text" pattern="[a-z,A-Z,0-9]">
+        <br>
+        <input type="file" name="avatar">
+        <br>
+        <input type="number" name="num" min=0 max=10 step="2">
+        <br>
+        <input type="range" name="slide" min=0 max=10>
+        <br>
+        <input type="search" name="search_item">
+        <br>
+        <input type="url" name="url_address">
       </fieldset>
       <fieldset>
         <legend>Data</legend>
@@ -47,8 +64,21 @@
       </fieldset>
       <fieldset>
         <legend>Thoughts?</legend>
-        <textarea name="thought" rows="8" cols="80"></textarea>
+        <textarea name="thought" rows="8" cols="80" focus></textarea>
       </fieldset>
+      <fieldset>
+        <legend>DataList</legend>
+        <input type="text" name="choose" list="choices">
+        <datalist id="choices">
+          <option value="yes"></option>
+          <option value="maybe"></option>
+          <option value="no"></option>
+        </datalist>
+      </fieldset>
+      <input type="submit" value="Dew it!">
+      <input type="reset">
+      <input type="image" src="../Lesson-13/r2d2.jpg" onclick="alert('Hi')">
+      <button type="button" id="standard">Fill in standard values</button>
     </form>
   </body>
 </html>
