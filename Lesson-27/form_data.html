@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form name="form" method="get" action="">
+      <p>NAME: <input name="name" size="50"></p>
+      <p>ADDRESS: <input name="address" size="50"></p>
+      <p>PHONE: <input name="phone" size="50"></p>
+      <p><input type="button" value="Display" id="display"></p>
+    </form>
+    <script type="text/javascript">
+      function display(){
+        //create a new window
+        dispWin = window.open('','NewWin','menubar=no,toolbar=no,stat=no,width=400,height=100');
+
+        //make the message for the window
+        message = "<ul><li>NAME: " +
+          document.form.name.value +
+          "</li>";
+        message += "<li>ADDRESS:" +
+          document.form.address.value +
+          "</li>";
+        message += "<li>PHONE:"+
+          document.form.phone.value +
+          "</li></ul>";
+
+        //write message to window
+        dispWin.document.write(message);
+      }
+      document.getElementById("display").addEventListener("click", display);
+
+    </script>
+  </body>
+</html>
