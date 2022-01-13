@@ -9,6 +9,16 @@
       <p>NAME: <input name="name" size="50"></p>
       <p>ADDRESS: <input name="address" size="50"></p>
       <p>PHONE: <input name="phone" size="50"></p>
+      <br>
+      Check some boxes:
+      <label for="c1">Box 1</label>
+      <input type="checkbox" name="box1">
+      <label for="c2">Box 2</label>
+      <input type="checkbox" name="box2">
+      <label for="c3">Box 3</label>
+      <input type="checkbox" name="box3">
+      <label for="c4">Box 4</label>
+      <input type="checkbox" name="box4">
       <p><input type="button" value="Display" id="display"></p>
     </form>
     <script type="text/javascript">
@@ -25,7 +35,17 @@
           "</li>";
         message += "<li>PHONE:"+
           document.form.phone.value +
-          "</li></ul>";
+          "</li>";
+        message += "<li>Check Boxes</li>"
+        message += "<ol><li>Check Box 1: "+
+          document.form.box1.checked + "</li>"
+        message += "<li>Check Box 2: "+
+          document.form.box2.checked + "</li>"
+        message += "<li>Check Box 3: "+
+          document.form.box3.checked + "</li>"
+        message += "<li>Check Box 4: "+
+          document.form.box4.checked + "</li>"
+        message += "</ol></ul>"
 
         //write message to window
         dispWin.document.write(message);
