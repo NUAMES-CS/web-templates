@@ -9,10 +9,31 @@
       width: 200px;
       background: linear-gradient(red, blue);
       border: solid black 5px;
+      /*transition: property duration timing-function delay;*/
+      /*transition: width 2s linear, height 2s ease,;*/
+      transition: transform 3s cubic-bezier(0.100, 1.650, 1.000, -0.600);
+    }
+    /*div:hover{
+      background: radial-gradient(red, blue);
+      //width: 400px;
+      //height: 400px;
+      transform: translate(10rem, 11rem) scale(2) rotate(45deg);
+    }*/
+    #d1.clicked{
+      transform: translate(10rem, 11rem) scale(2) rotate(45deg);
     }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
+    <div id="d1"></div>
     <div></div>
+    <script>
+    $(function(){
+      $("div").click(function(){
+        $(this).toggleClass('clicked');
+      });
+    });
+    </script>
   </body>
 </html>
