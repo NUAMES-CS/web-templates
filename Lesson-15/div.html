@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		div{
+			width: 10rem;
+			height: 10rem;
+			margin: 3rem auto;
+			border: 1px solid black;
+			animation: ani 5s 2;
+		}
+		@keyframes ani {
+			0%{
+				transform: scale(0.5);
+				background: red;
+			}
+			50%{
+				background: yellow;
+				transform: scale(.75);
+			}
+			60%{
+				background: green;
+			}
+			100%{
+				transform: scale(1);
+				background: blue;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
