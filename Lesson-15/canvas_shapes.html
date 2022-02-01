@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			canvas{
+				border: 2px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="300" height="300">
+		</canvas>
+		<script>
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			//solid shape
+			context.fillStyle = "rgb(13, 118, 208)";
+			context.fillRect(30,30,100,150);
+			//outline
+			context.strokeStyle = "rgb(242, 137, 47)";
+			context.strokeRect(30,30,150,100);
+			//circle
+			//start and end points need to be in radians
+			var start = 0;
+			var end = 3*(Math.PI)/2;
+
+			context.fillStyle = "rgba(255, 0, 0, 0.5)";
+			context.beginPath();
+			//			x,   y,   radius,start,end, clockwise?
+			context.arc(200, 200, 100, start, end, false);
+
+			context.lineTo(200,200);
+			context.lineTo(300,200);
+			context.fill();
+			context.lineWidth = 15;
+			context.moveTo(0,300);
+			context.lineTo(100,300);
+			context.stroke();
+
+		</script>
+	</body>
+</html>

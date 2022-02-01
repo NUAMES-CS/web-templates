@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style media="screen">
+			canvas{
+				transform: scale(0.5) translateY(-600px);
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="1262" height="1209"></canvas>
+		<script>
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext('2d');
+			var img = new Image();
+			img.src = "dog.jpg";
+			var width = 1262;
+			var height = 1209;
+			var frames = 1;
+			var currentFrame = 0;
+			var draw = function() {
+				context.clearRect(0,0,width, height);
+				context.drawImage(
+				img,//the image
+				width * currentFrame, 0,//starting x/y
+				width, height,//ending x/y
+				0,0,//crop from x/y
+				width, height//crop to x/y
+				);
+			};
+
+			if (currentFrame == frames){//if the current frame is equal to the total number of frames
+				currentFrame = 0;//go back to the beginning
+			}
+			else{
+				currentFrame++;//if not, go to the next frame
+			}
+			setInterval(draw, 200);
+		</script>
+	</body>
+</html>
