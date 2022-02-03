@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Trooper Classroom</title>
+    <style>
+      canvas {
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext('2d');
+      var trooper = new Image();
+      trooper.src = "JorgePerez_TheOtherSide.jpg";
+      var frame = 0;
+      var x = 0;
+      var y = 0;
+      const list = [[1044, 276],
+                    [686, 298],
+                    [208, 297],
+                    [517, 221],
+                    [826, 248],
+                    [321, 150]
+                  ];
+      var draw = function() {
+        context.clearRect(0, 0, 800, 600);
+        //current image selection x coordinate
+        x = list[frame][0];
+        //current image selection y coordinate
+        y = list[frame][1];
+        /* FIXME: complete the drawImage function, cropping the
+                  400x300 image selection at the current x&y points, and
+                  stretching them to fill the canvas
+        */
+        context.drawImage();
+        if (frame == list.length-1) {
+          frame = 0;
+        } else {
+          frame++;
+        }
+      };
+      setInterval(draw, 1000);
+    </script>
+  </body>
+</html>
